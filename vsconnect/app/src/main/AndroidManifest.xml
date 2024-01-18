@@ -10,12 +10,11 @@
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/Theme.Vsconnect"
+            android:theme="@style/Theme.VSConnect_Kotlin"
             tools:targetApi="31">
-
         <activity android:name=".LoginActivity"
                   android:exported="true"
-                  android:theme="@style/Theme.Vsconnect.NoActionBar">
+                  android:theme="@style/Theme.VSConnect_Kotlin.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -25,7 +24,7 @@
         <activity
                 android:name=".MainActivity"
                 android:exported="true"
-                android:theme="@style/Theme.Vsconnect.NoActionBar">
+                android:theme="@style/Theme.VSConnect_Kotlin.NoActionBar">
         </activity>
     </application>
 

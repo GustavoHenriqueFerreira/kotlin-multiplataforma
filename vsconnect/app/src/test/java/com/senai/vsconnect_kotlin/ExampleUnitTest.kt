@@ -1,4 +1,4 @@
-package com.senai.vsconnect
+package com.senai.vsconnect_kotlin
 
 import org.junit.Test
 

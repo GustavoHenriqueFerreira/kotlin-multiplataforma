@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.senai.vsconnect"
+    namespace = "com.senai.vsconnect_kotlin"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.senai.vsconnect"
+        applicationId = "com.senai.vsconnect_kotlin"
         minSdk = 34
         targetSdk = 34
         versionCode = 1

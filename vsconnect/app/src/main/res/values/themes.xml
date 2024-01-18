@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.Vsconnect" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.VSConnect_Kotlin" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/azul_marinho</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -13,10 +13,10 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-    <style name="Theme.Vsconnect.NoActionBar">
+    <style name="Theme.VSConnect_Kotlin.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="Theme.Vsconnect.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-    <style name="Theme.Vsconnect.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
+    <style name="Theme.VSConnect_Kotlin.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <style name="Theme.VSConnect_Kotlin.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 </resources>

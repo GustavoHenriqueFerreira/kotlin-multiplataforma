@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "vsconnect"
+rootProject.name = "VSConnect_Kotlin"
 include(":app")
  

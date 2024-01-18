@@ -10,26 +10,17 @@
     <com.google.android.material.appbar.AppBarLayout
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
-            android:theme="@style/Theme.Vsconnect.AppBarOverlay">
+            android:theme="@style/Theme.VSConnect_Kotlin.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:background="@color/azul_marinho_fundo_menu"
-                app:popupTheme="@style/Theme.Vsconnect.PopupOverlay"
+                app:popupTheme="@style/Theme.VSConnect_Kotlin.PopupOverlay"
                 android:layout_height="?attr/actionBarSize"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_main"/>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom|end"
-            android:layout_marginEnd="@dimen/fab_margin"
-            android:layout_marginBottom="16dp"
-            app:srcCompat="@android:drawable/ic_dialog_email"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

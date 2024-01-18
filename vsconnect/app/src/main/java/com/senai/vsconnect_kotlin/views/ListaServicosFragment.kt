@@ -1,11 +1,11 @@
-package com.senai.vsconnect.views
+package com.senai.vsconnect_kotlin.views
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.senai.vsconnect.databinding.FragmentListaServicosBinding
+import com.senai.vsconnect_kotlin.databinding.FragmentListaServicosBinding
 
 class ListaServicosFragment : Fragment() {
 
@@ -20,6 +20,7 @@ class ListaServicosFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         _binding = FragmentListaServicosBinding.inflate(inflater, container, false)
         val root: View = binding.root
 

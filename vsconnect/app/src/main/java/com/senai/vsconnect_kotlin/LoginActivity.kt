@@ -1,4 +1,4 @@
-package com.senai.vsconnect
+package com.senai.vsconnect_kotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
