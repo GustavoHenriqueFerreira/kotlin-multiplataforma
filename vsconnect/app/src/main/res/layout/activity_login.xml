@@ -7,24 +7,32 @@
         android:layout_height="match_parent"
         tools:context=".LoginActivity"
         android:background="@color/azul_marinho"
-        android:padding="20dp">
+        android:padding="20dp"
+>
 
-    <ImageView android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:src="@drawable/logo_light"
-               app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-               app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="80dp" android:id="@+id/imageView2"
-               app:layout_constraintBottom_toTopOf="@+id/titulo_email" app:layout_constraintHorizontal_bias="0.495"
-               app:layout_constraintVertical_bias="0.137"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="80dp" android:id="@+id/imageView"/>
     <TextView
             android:text="E-mail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:id="@+id/titulo_email"
             android:textColor="@color/white" android:textSize="20dp"
-            android:fontFamily="@font/titilliumweb_light" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintBottom_toTopOf="@+id/campo_email" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="180dp"/>
+            android:fontFamily="@font/titilliumweb_light" app:layout_constraintTop_toBottomOf="@+id/imageView"
+            android:layout_marginTop="140dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+    <TextView
+            android:text="Senha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/titulo_senha"
+            android:textColor="@color/white" android:textSize="20dp"
+            android:fontFamily="@font/titilliumweb_light" app:layout_constraintTop_toBottomOf="@+id/campo_email"
+            android:layout_marginTop="40dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.002"/>
     <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -32,23 +40,12 @@
             android:ems="10"
             android:hint="exemplo@email.com"
             android:textColorHint="@color/black"
-            android:padding="15dp"
-            android:paddingStart="15dp"
             android:background="@drawable/style_card"
-            android:id="@+id/campo_email"
-            tools:ignore="RtlSymmetry" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.4"
-            android:layout_marginTop="20dp" app:layout_constraintTop_toBottomOf="@+id/titulo_email"/>
+            android:paddingStart="10dp"
 
-    <TextView
-            android:text="Senha"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/titulo_senha"
-            android:textColor="@color/white" android:textSize="20dp"
-            android:fontFamily="@font/titilliumweb_light" tools:ignore="DuplicateIds"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.002" app:layout_constraintBottom_toTopOf="@+id/campo_senha"
-            app:layout_constraintTop_toBottomOf="@+id/campo_email" android:layout_marginTop="40dp"/>
+            android:id="@+id/campo_email"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_email"/>
     <EditText
             android:layout_width="match_parent"
             android:layout_height="50dp"
@@ -56,23 +53,25 @@
             android:ems="10"
             android:hint="******"
             android:textColorHint="@color/black"
-            android:padding="15dp"
-            android:paddingStart="15dp"
             android:background="@drawable/style_card"
+            android:paddingStart="10dp"
+
             android:id="@+id/campo_senha"
-            tools:ignore="RtlSymmetry" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="250dp"/>
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo_senha"/>
     <Button
             android:text="Entrar"
             android:textAllCaps="false"
-            android:fontFamily="@font/titilliumweb_bold"
             android:layout_width="200dp"
-            android:layout_height="50dp" android:id="@+id/btn_entrar"
+            android:layout_height="50dp"
+            android:id="@+id/btn_entrar"
+            android:fontFamily="@font/titilliumweb_bold"
             android:textSize="20dp"
             android:textColor="@color/white"
             android:backgroundTint="@color/rosa"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="80dp" app:layout_constraintTop_toBottomOf="@+id/campo_senha"/>
+
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/campo_senha" android:layout_marginTop="40dp"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
