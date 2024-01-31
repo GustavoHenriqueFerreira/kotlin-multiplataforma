@@ -16,25 +16,23 @@ class ListaServicoAdapter(
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
 
-        fun VincularDadosNoItem(servico: Servico) {
+        //Essa função é responsável por chamar e atribuir valores para as views do item da RecyclerView
+        fun vincularDadosNoItem(servico: Servico) {
             val tituloServico = itemView.findViewById<TextView>(R.id.nomeServico)
-
             tituloServico.text = servico.titulo
 
             val propostaServico = itemView.findViewById<TextView>(R.id.valorServico)
-
             propostaServico.text = servico.proposta
 
             val descricaoServico = itemView.findViewById<TextView>(R.id.descricaoServico)
-
             descricaoServico.text = servico.descricao
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListaServicoAdapter.ViewHolder {
-        val inflater = LayoutInflater.from(context)
+        val inflater = LayoutInflater.from(context);
 
-        val view = inflater.inflate(R.layout.fragment_servico, parent, false) //pega qual fragmento vamos usar para lista
+        val view = inflater.inflate(R.layout.fragment_servico, parent, false)
 
         return ViewHolder(view)
     }
@@ -42,10 +40,10 @@ class ListaServicoAdapter(
     override fun onBindViewHolder(holder: ListaServicoAdapter.ViewHolder, position: Int) {
         val itemServico = listaServicos[position]
 
-        holder.VincularDadosNoItem(itemServico)
+        holder.vincularDadosNoItem(itemServico)
     }
 
     override fun getItemCount(): Int {
-       return listaServicos.size
+        return listaServicos.size
     }
 }

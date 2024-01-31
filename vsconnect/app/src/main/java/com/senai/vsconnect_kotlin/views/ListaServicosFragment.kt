@@ -17,9 +17,9 @@ import retrofit2.Response
 
 class ListaServicosFragment : Fragment() {
 
-    private val clientRetrofit = RetrofitConfig.obterInstanciaRetrofit()
+    private val clienteRetrofit = RetrofitConfig.obterInstanciaRetrofit()
 
-    private val endpoints = clientRetrofit.create(EndpointInterface::class.java)
+    private val endpoints = clienteRetrofit.create(EndpointInterface::class.java)
 
     private var _binding: FragmentListaServicosBinding? = null
 
@@ -34,15 +34,17 @@ class ListaServicosFragment : Fragment() {
     ): View {
 
         _binding = FragmentListaServicosBinding.inflate(inflater, container, false)
+
         val root: View = binding.root
 
+        // organiza os itens da Recycler em ordem vertical, sendo um debaixo do outro
         binding.recyclerServicos.layoutManager = LinearLayoutManager(requireContext())
 
-        endpoints.listaServicos().enqueue(object:Callback<List<Servico>> {
+        endpoints.listarServicos().enqueue(object : Callback<List<Servico>> {
             override fun onResponse(call: Call<List<Servico>>, response: Response<List<Servico>>) {
                 val servicos = response.body()
 
-                binding.recyclerServicos.adapter = servicos?.let { ListaServicoAdapter(requireContext(), it) } //? = não é nulo
+                binding.recyclerServicos.adapter = servicos?.let { ListaServicoAdapter(requireContext(), it) }
             }
 
             override fun onFailure(call: Call<List<Servico>>, t: Throwable) {
